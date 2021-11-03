@@ -32,10 +32,10 @@
           <img src="images/perfil.png" alt="Foto Pessoal" />
         </div>
 
-        <h1>Lucas Ferreira</h1>
+        <h1 id="userName">Lucas Ferreira</h1>
         <!--o h1 tem como funcao deixar o texto grande e com bordas grossas-->
 
-        <a href="https://github.com/LucasFerreiraPrazeres">
+        <a href="https://github.com/LucasFerreiraPrazeres" target="_blank">
           <!--ele é usado para inserir links-->
           <img src="images/github.svg" alt="Ícone Github" />
           LucasFerreiraPrazeres</a
@@ -43,48 +43,67 @@
 
         <p>Apaixonado por tecnologias e inovação, em constante aprendizado.</p>
 
-        <ul>
-          <li>
-            <a href="https://youtube.com">
-              <img
-                src="images/youtube.svg"
-                alt="Ícone YouTube"
-                target="_blank"
-              />
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com" target="_blank">
+              <img src="images/youtube.svg" alt="Ícone YouTube" />
             </a>
           </li>
 
-          <li>
-            <a href="https://facebook.com">
-              <img
-                src="images/facebook.svg"
-                alt="Ícone Facebook"
-                target="_blank"
-              />
+          <li class="facebook">
+            <a href="https://facebook.com" target="_blank">
+              <img src="images/facebook.svg" alt="Ícone Facebook" />
             </a>
           </li>
 
-          <li>
-            <a href="https://instagram.com">
-              <img
-                src="images/instagram.svg"
-                alt="Ícone Instagram"
-                target="_blank"
-              />
+          <li class="instagram">
+            <a href="https://instagram.com" target="_blank">
+              <img src="images/instagram.svg" alt="Ícone Instagram" />
             </a>
           </li>
 
-          <li>
-            <a href="https://twitter.com">
-              <img
-                src="images/twitter.svg"
-                alt="Ícone twitter"
-                target="_blank"
-              />
+          <li class="twitter">
+            <a href="https://twitter.com" target="_blank">
+              <img src="images/twitter.svg" alt="Ícone twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const linksSocialMedia = {
+        github: 'LucasFerreiraPrazeres',
+        youtube: '',
+        facebook: 'kinhaax',
+        instagram: 'prazer.lucass',
+        twitter: 'LucasFe30258387'
+      }
+
+      /*primeira opção para alteração de conteúdo
+
+      function changeSocialMediaLinks() {
+        document.getElementById('userName').textContent = 'Lucas'
+      }
+      */
+
+      /* segunda opção
+      function changeSocialMediaLinks() {
+        userName.textContent = 'Lucas'
+      }
+      */
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
