@@ -8,6 +8,8 @@
 
 ## Status:
 
-🚧 Em andamento
+✔️ Concluído
 
-![Cat Typing](https://github.com/LucasFerreiraPrazeres/NLW/blob/master/images/typing-cat.gif)
+Link para interação: https://lucasferreiraprazeres.github.io/NLW/
+
+![crachá](https://github.com/LucasFerreiraPrazeres/NLW/blob/master/images/crach%C3%A1.png)
